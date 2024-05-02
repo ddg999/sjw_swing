@@ -25,7 +25,8 @@ public class BubbleFrame extends JFrame {
 
 	private void initData() {
 		// todo 이미지 변경
-		backgroundMap = new JLabel(new ImageIcon("img/backgroundMapService.png"));
+		backgroundMap = new JLabel(new ImageIcon("img/backgroundMap.png"));
+		//backgroundMap = new JLabel(new ImageIcon("img/backgroundMapService.png"));
 		// backgroundMap = new JLabel(new ImageIcon("img/test.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setContentPane(backgroundMap); // Frame -> root Panel에 add 처리

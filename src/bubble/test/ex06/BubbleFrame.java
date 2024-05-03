@@ -1,4 +1,4 @@
-package bubble.test.ex04;
+package bubble.test.ex06;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
@@ -61,6 +61,10 @@ public class BubbleFrame extends JFrame {
 					break;
 				case KeyEvent.VK_UP:
 					player.up();
+					break;
+				case KeyEvent.VK_SPACE:
+					add(new Bubble(player));
+					repaint();
 					break;
 				default:
 					break;

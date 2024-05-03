@@ -1,4 +1,4 @@
-package bubble.test.ex03;
+package bubble.test.ex07;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
@@ -23,12 +23,12 @@ public class BubbleFrame extends JFrame {
 
 	private void initData() {
 		// todo 이미지 변경
-		backgroundMap = new JLabel(new ImageIcon("img/backgroundMapService.png"));
+		backgroundMap = new JLabel(new ImageIcon("img/backgroundMap.png"));
+		// backgroundMap = new JLabel(new ImageIcon("img/backgroundMapService.png"));
 		// backgroundMap = new JLabel(new ImageIcon("img/test.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setContentPane(backgroundMap); // Frame -> root Panel에 add 처리
 		setSize(1000, 640);
-
 		player = new Player();
 	}
 
@@ -47,13 +47,23 @@ public class BubbleFrame extends JFrame {
 				System.out.println("key code : " + e.getKeyCode());
 				switch (e.getKeyCode()) {
 				case KeyEvent.VK_LEFT:
-					player.left();
+					if (!player.isLeft() && !player.isLeftWallCrash()) {
+						player.left();
+					}
 					break;
 				case KeyEvent.VK_RIGHT:
-					player.right();
+					if (!player.isRight() && !player.isRightWallCrash()) {
+						player.right();
+					}
 					break;
 				case KeyEvent.VK_UP:
 					player.up();
+					break;
+				case KeyEvent.VK_SPACE:
+					add(new Bubble(player));
+					repaint();
+					break;
+				default:
 					break;
 				}
 			} // end of KeyPressed
@@ -62,14 +72,17 @@ public class BubbleFrame extends JFrame {
 			public void keyReleased(KeyEvent e) {
 				switch (e.getKeyCode()) {
 				case KeyEvent.VK_LEFT:
+					// 왼쪽으로 가는 상태 멈춤
 					player.setLeft(false);
 					break;
 				case KeyEvent.VK_RIGHT:
+					// 오른쪽으로 가는 상태 멈춤
 					player.setRight(false);
+					break;
+				default:
 					break;
 				}
 			} // end of KeyReleased
-
 		});
 	}
 

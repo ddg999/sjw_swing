@@ -48,6 +48,9 @@ public class BackgroundPlayerService implements Runnable {
 			} else if (!player.isUp() && !player.isDown()) {
 				player.down();
 			}
+//			if (!player.isUp() && bottomColorLeft + bottomColorRight == -2) {
+//				player.down();
+//			}
 
 			// 왼쪽 벽에 충돌함
 			if (leftColor.getRed() == 255 && leftColor.getGreen() == 0 && leftColor.getBlue() == 0) {

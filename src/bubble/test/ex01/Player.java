@@ -5,9 +5,9 @@ import javax.swing.JLabel;
 
 public class Player extends JLabel implements Moveable {
 
+	private ImageIcon playerR, playerL;
 	private int x;
 	private int y;
-	private ImageIcon playerR, playerL;
 
 	public Player() {
 		initData();

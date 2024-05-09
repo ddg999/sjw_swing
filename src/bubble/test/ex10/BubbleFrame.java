@@ -15,7 +15,7 @@ public class BubbleFrame extends JFrame {
 	private JLabel backgroundMap;
 	// 포함관계 - 콤포지션
 	private Player player;
-	private Enemy enemy1;
+	private Enemy enemy;
 
 	public BubbleFrame() {
 		initData();
@@ -34,7 +34,7 @@ public class BubbleFrame extends JFrame {
 
 		// mContext --> 참조 타입() --> 주소값의 크기는 기본 4byte 이다.
 		player = new Player(mContext);
-		enemy1 = new Enemy(mContext);
+		enemy = new Enemy(mContext);
 	}
 
 	private void setInitLayout() {
@@ -43,7 +43,7 @@ public class BubbleFrame extends JFrame {
 		setLocationRelativeTo(null); // JFrame을 모니터 가운데 자동 배치
 		setVisible(true);
 		add(player);
-		add(enemy1);
+		add(enemy);
 	}
 
 	private void addEventListener() {
@@ -98,7 +98,7 @@ public class BubbleFrame extends JFrame {
 	}
 
 	public Enemy getEnemy() {
-		return enemy1;
+		return enemy;
 	}
 
 	// 코드 테스트

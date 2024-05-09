@@ -11,7 +11,6 @@ import bubble.components.Enemy;
 import bubble.components.Player;
 
 public class BubbleFrame extends JFrame {
-
 	// 컨텍스트를 생성하는 방법 (셀프 참조)
 	BubbleFrame mContext = this;
 
@@ -37,7 +36,7 @@ public class BubbleFrame extends JFrame {
 
 		// mContext --> 참조 타입() --> 주소값의 크기는 기본 4byte 이다.
 		player = new Player(mContext);
-		Enemy enemy = new Enemy(mContext);
+		enemy = new Enemy(mContext);
 	}
 
 	private void setInitLayout() {
@@ -106,9 +105,13 @@ public class BubbleFrame extends JFrame {
 
 	// 코드 테스트
 	public static void main(String[] args) {
+		try {
+			Thread.sleep(3000);
+			new BubbleFrame();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		// main 함수를 가지고 있는 클래스는 하위에 생성된 모든 객체들의
 		// 주소값을 알고 있다. (중요! 중요! 중요!)
-
-		new BubbleFrame();
 	} // end of main
 }

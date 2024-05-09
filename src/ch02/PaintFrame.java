@@ -52,7 +52,5 @@ public class PaintFrame extends JFrame {
 			g.setColor(Color.BLUE);
 			g.drawString("태양", 610, 130);
 		}
-
 	}
-
 }

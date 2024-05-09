@@ -167,6 +167,8 @@ public class Enemy extends JLabel implements Moveable {
 
 		// 처음 실행시 초기값 셋팅
 		state = 0;
+		x = 720;
+		y = 175;
 
 		// 적군 방향 상태
 		left = false;

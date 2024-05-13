@@ -56,103 +56,6 @@ public class Enemy extends JLabel implements Moveable {
 	// 적군 방향 상태
 	private EnemyWay enemyWay;
 
-	// get, set
-	public int getState() {
-		return state;
-	}
-
-	public void setState(int state) {
-		this.state = state;
-	}
-
-	public BubbleFrame getmContext() {
-		return mContext;
-	}
-
-	public void setmContext(BubbleFrame mContext) {
-		this.mContext = mContext;
-	}
-
-	public int getX() {
-		return x;
-	}
-
-	public void setX(int x) {
-		this.x = x;
-	}
-
-	public int getY() {
-		return y;
-	}
-
-	public void setY(int y) {
-		this.y = y;
-	}
-
-	public ImageIcon getEnemyR() {
-		return enemyR;
-	}
-
-	public void setEnemyR(ImageIcon enemyR) {
-		this.enemyR = enemyR;
-	}
-
-	public ImageIcon getEnemyL() {
-		return enemyL;
-	}
-
-	public void setEnemyL(ImageIcon enemyL) {
-		this.enemyL = enemyL;
-	}
-
-	public boolean isLeft() {
-		return left;
-	}
-
-	public void setLeft(boolean left) {
-		this.left = left;
-	}
-
-	public boolean isRight() {
-		return right;
-	}
-
-	public void setRight(boolean right) {
-		this.right = right;
-	}
-
-	public boolean isUp() {
-		return up;
-	}
-
-	public void setUp(boolean up) {
-		this.up = up;
-	}
-
-	public boolean isDown() {
-		return down;
-	}
-
-	public void setDown(boolean down) {
-		this.down = down;
-	}
-
-	public EnemyWay getEnemyWay() {
-		return enemyWay;
-	}
-
-	public void setEnemyWay(EnemyWay enemyWay) {
-		this.enemyWay = enemyWay;
-	}
-
-	public int getSPEED() {
-		return SPEED;
-	}
-
-	public int getJUMPSPEED() {
-		return JUMPSPEED;
-	}
-
 	public Enemy(BubbleFrame mContext) {
 		this.mContext = mContext;
 		initData();
@@ -275,5 +178,102 @@ public class Enemy extends JLabel implements Moveable {
 				down = false;
 			}
 		}).start();
+	}
+
+	// get, set
+	public int getState() {
+		return state;
+	}
+
+	public void setState(int state) {
+		this.state = state;
+	}
+
+	public BubbleFrame getmContext() {
+		return mContext;
+	}
+
+	public void setmContext(BubbleFrame mContext) {
+		this.mContext = mContext;
+	}
+
+	public int getX() {
+		return x;
+	}
+
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	public int getY() {
+		return y;
+	}
+
+	public void setY(int y) {
+		this.y = y;
+	}
+
+	public ImageIcon getEnemyR() {
+		return enemyR;
+	}
+
+	public void setEnemyR(ImageIcon enemyR) {
+		this.enemyR = enemyR;
+	}
+
+	public ImageIcon getEnemyL() {
+		return enemyL;
+	}
+
+	public void setEnemyL(ImageIcon enemyL) {
+		this.enemyL = enemyL;
+	}
+
+	public boolean isLeft() {
+		return left;
+	}
+
+	public void setLeft(boolean left) {
+		this.left = left;
+	}
+
+	public boolean isRight() {
+		return right;
+	}
+
+	public void setRight(boolean right) {
+		this.right = right;
+	}
+
+	public boolean isUp() {
+		return up;
+	}
+
+	public void setUp(boolean up) {
+		this.up = up;
+	}
+
+	public boolean isDown() {
+		return down;
+	}
+
+	public void setDown(boolean down) {
+		this.down = down;
+	}
+
+	public EnemyWay getEnemyWay() {
+		return enemyWay;
+	}
+
+	public void setEnemyWay(EnemyWay enemyWay) {
+		this.enemyWay = enemyWay;
+	}
+
+	public int getSPEED() {
+		return SPEED;
+	}
+
+	public int getJUMPSPEED() {
+		return JUMPSPEED;
 	}
 }
